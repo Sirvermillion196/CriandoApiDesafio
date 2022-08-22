@@ -2,12 +2,14 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using AtividadeAPI.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace AtividadeAPI
 {
-    public partial class cursodev_grupo1Context : DbContext
+    public partial class cursodev_grupo1Context : IdentityDbContext<ApplicationUser>
     {
         public cursodev_grupo1Context()
         {
