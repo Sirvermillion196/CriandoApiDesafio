@@ -11,9 +11,6 @@ namespace AtividadeAPI
 {
     public partial class cursodev_grupo1Context : IdentityDbContext<ApplicationUser>
     {
-        public cursodev_grupo1Context()
-        {
-        }
 
         public cursodev_grupo1Context(DbContextOptions<cursodev_grupo1Context> options)
             : base(options)
@@ -32,6 +29,7 @@ namespace AtividadeAPI
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Banco>(entity =>
             {
                 entity.HasKey(e => e.IdBanco)

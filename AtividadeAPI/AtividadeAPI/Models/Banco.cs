@@ -12,6 +12,7 @@ namespace AtividadeAPI
     {
         [Key]
         public int IdBanco { get; set; }
+        public string? NomeBanco { get; set; }
         public int? IdConta { get; set; }
 
         [ForeignKey("IdConta")]
